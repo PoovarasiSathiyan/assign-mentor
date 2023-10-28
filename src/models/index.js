@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
-const DB = require('../common/dbConfig')
+
 
 try{
-    mongoose.connect(`${DB.dbUrl}/${DB.dbName}`)
+    mongoose.connect(`${process.env.dbUrl}/${process.env.dbName}`)
     console.log("Database Connected Sucessfully")
     }
 catch (error) {
